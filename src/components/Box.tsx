@@ -14,5 +14,5 @@ export const Box = forwardRef<IncrementedRef, BoxProps>(({size, color}, ref)=>{
       current:divRef.current
     }))
     return(
-      <div className={`h-[${size}px] w-[${size}px] border-2 ${color} my-0 mx-auto`} ref={divRef}></div>)
+      <div className={`h-[${size}px] w-[${size}px] ${color} my-0 mx-auto`} ref={divRef}></div>)
     })

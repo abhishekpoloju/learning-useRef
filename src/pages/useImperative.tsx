@@ -4,11 +4,13 @@ export type IncrementedRef={
   getYLocation:()=> number | undefined
   current: HTMLDivElement | null
 }
+const data =["","",""]
 const UseImperative = () => {
   const refs=[useRef<IncrementedRef>(null), useRef<IncrementedRef>(null), useRef<IncrementedRef>(null)]
   const goToBox=(position:number)=>{
     console.log('go to box: ',refs[position]?.current?.current)
     const boxTop=refs[position]?.current?.getYLocation();
+    console.log(boxTop)
     window.scrollTo({top: boxTop,behavior: 'smooth'})
   }
   return (
